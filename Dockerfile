@@ -1,6 +1,5 @@
 FROM debian:bookworm-slim
 
-# Install dependencies
 RUN dpkg --add-architecture i386 \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -11,7 +10,6 @@ RUN dpkg --add-architecture i386 \
         unzip \
     && rm -rf /var/lib/apt/lists/*
 
-# Create steam user
 RUN useradd -m steam
 
 USER steam
@@ -24,7 +22,7 @@ RUN mkdir steamcmd \
     && tar -xvzf steamcmd_linux.tar.gz \
     && rm steamcmd_linux.tar.gz
 
-# Install Terraria server
+# Install Terraria Dedicated Server (AppID 105600)
 RUN ./steamcmd/steamcmd.sh +login anonymous \
     +force_install_dir /home/steam/terraria \
     +app_update 105600 validate \
