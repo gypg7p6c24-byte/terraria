@@ -8,6 +8,6 @@ echo "Starting Terraria Server..."
 exec ./TerrariaServer.bin.x86_64 \
   -port 7777 \
   -world /home/steam/terraria/Worlds/world.wld \
-  -autocreate 2 \
+  -autocreate 3 \
   -worldname world \
   -difficulty 0
