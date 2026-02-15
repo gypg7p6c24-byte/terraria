@@ -2,7 +2,6 @@
 set -e
 
 cd /home/steam/terraria
-
 echo "Starting Terraria Server..."
 
 exec ./TerrariaServer.bin.x86_64 \
