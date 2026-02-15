@@ -22,8 +22,8 @@ RUN mkdir steamcmd \
     && tar -xvzf steamcmd_linux.tar.gz \
     && rm steamcmd_linux.tar.gz
 
-# Install Terraria Dedicated Server (AppID 105600)
-RUN ./steamcmd/steamcmd.sh +login anonymous \
+RUN ./steamcmd/steamcmd.sh +@sSteamCmdForcePlatformType linux \
+    +login anonymous \
     +force_install_dir /home/steam/terraria \
     +app_update 105600 validate \
     +quit
