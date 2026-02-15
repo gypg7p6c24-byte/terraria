@@ -1,12 +1,13 @@
 #!/bin/bash
 set -e
 
-cd /home/steam/terraria
 echo "Starting Terraria Server..."
 
-exec ./TerrariaServer.bin.x86_64 \
+cd /home/steam/terraria
+
+mono TerrariaServer.exe \
   -port 7777 \
   -world /home/steam/terraria/Worlds/world.wld \
-  -autocreate 3 \
+  -autocreate 2 \
   -worldname world \
   -difficulty 0
