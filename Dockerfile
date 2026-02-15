@@ -31,7 +31,6 @@ RUN ./steamcmd/steamcmd.sh +login anonymous \
 WORKDIR /home/steam/terraria
 
 EXPOSE 7777
-
 COPY --chown=steam:steam entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
